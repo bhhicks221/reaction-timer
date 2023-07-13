@@ -3,7 +3,7 @@
   <button @click="start" :disabled="isPlaying">play</button>
   <button @click="isPlaying = false" :disabled="!isPlaying">End game</button>
   <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
-  <Results v-if="showResults" :score="score"/>
+  <Results v-if="showResults" :score="score/1000"/>
 </template>
 
 <script>
